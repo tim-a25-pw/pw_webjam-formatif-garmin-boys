@@ -1,18 +1,18 @@
 import Swiper from 'swiper/bundle';
 
 export default class Carrousel {
-  constructor(e) {
-    this.e = e;
+  constructor(element) {
+    this.element = element;
     this.options = {
       slidesPerView: 1,
       spaceBetween: 20,
       pagination: {
-        el: this.e.querySelector('.swiper-pagination'),
+        el: this.element.querySelector('.swiper-pagination'),
         type: 'bullets',
       },
       navigation: {
-        nextEl: this.e.querySelector('.swiper-button-next'),
-        prevEl: this.e.querySelector('.swiper-button-prev'),
+        nextEl: this.element.querySelector('.swiper-button-next'),
+        prevEl: this.element.querySelector('.swiper-button-prev'),
       },
       breakpoints: {},
     };
@@ -25,7 +25,7 @@ export default class Carrousel {
     this.initSwiper();
   }
   setOptions() {
-    if ('split' in this.e.dataset) {
+    if ('split' in this.element.dataset) {
       this.options.breakpoints = {
         768: {
           slidesPerView: 2.5,
@@ -33,7 +33,7 @@ export default class Carrousel {
       };
     }
 
-    if ('autoplay' in this.e.dataset) {
+    if ('autoplay' in this.element.dataset) {
       this.options.autoplay = {
         delay: 3000,
         pauseOnMouseEnter: true,
@@ -41,19 +41,24 @@ export default class Carrousel {
       };
     }
 
-    if ('loop' in this.e.dataset) {
+    if ('loop' in this.element.dataset) {
       this.options.loop = true;
     }
 
-    if ('slides' in this.e.dataset) {
+    if ('slides' in this.element.dataset) {
       this.options.slidesPerView = parseInt(
-        this.e.dataset.slides || this.options.slidesPerView
+        this.element.dataset.slides || this.options.slidesPerView
       );
+    }
+
+    if ('gap' in this.element.dataset) {
+      this.options.spaceBetween =
+        parseFloat(this.element.dataset.slides) || this.options.slidesPerView;
     }
   }
   initSwiper() {
-    if (this.e) {
-      const swiper = new Swiper(this.e, this.options);
+    if (this.element) {
+      const swiper = new Swiper(this.element, this.options);
     }
   }
 }

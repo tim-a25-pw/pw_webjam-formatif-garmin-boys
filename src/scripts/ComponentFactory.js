@@ -1,3 +1,11 @@
+import Bars from './components/Bars.js';
+import Carousel from './components/Carousel.js';
+import Form from './components/Form.js';
+import Header from './components/Header.js';
+import Scrolly from './components/Scrolly.js';
+import Youtube from './components/Youtube.js';
+
+
 export default class ComponentFactory {
   constructor() {
     this.componentInstances = [];
