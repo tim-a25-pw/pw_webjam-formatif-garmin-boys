@@ -4,6 +4,8 @@ import Form from './components/Form.js';
 import Header from './components/Header.js';
 import Scrolly from './components/Scrolly.js';
 import Youtube from './components/Youtube.js';
+import Scroller from './components/Scroller.js';
+import TextAnim from './components/TextAnim.js';
 
 
 export default class ComponentFactory {
