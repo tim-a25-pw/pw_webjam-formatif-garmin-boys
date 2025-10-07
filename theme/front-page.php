@@ -16,8 +16,8 @@
 
 <?php
 $args = [
-    'post_type' => 'your_cpt_slug', // Change to your CPT slug
-    'posts_per_page' => 3,
+    'post_type' => 'cpt_produit', // Change to your CPT slug
+    'posts_per_page' => 1,
     'category_name' => 'Plomberie', // Category slug
 ];
 
@@ -36,7 +36,7 @@ if ($query->have_posts()) : ?>
                     <a href="<?php the_permalink(); ?>" class="link">Voir plus</a>
                 </div>
             <?php endwhile; ?>
-            
+
         </div>
     </section>
 <?php endif;
