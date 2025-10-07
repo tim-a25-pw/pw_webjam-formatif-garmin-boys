@@ -10,7 +10,7 @@ function pw_creer_menu() {
 add_action('init', 'pw_creer_menu');
 
 // Register Custom Post Type
-function create_cpt_produits() {
+function create_cpt_produit() {
 
 	$labels = array(
 		'name'                  => _x( 'Produits', 'Post Type General Name', 'text_domain' ),
@@ -22,7 +22,7 @@ function create_cpt_produits() {
 		'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
 		'all_items'             => __( 'All Items', 'text_domain' ),
 		'add_new_item'          => __( 'Add New Item', 'text_domain' ),
-		'add_new'               => __( 'Nouveau produit', 'text_domain' ),
+		'add_new'               => __( 'Add New', 'text_domain' ),
 		'new_item'              => __( 'New Item', 'text_domain' ),
 		'edit_item'             => __( 'Edit Item', 'text_domain' ),
 		'update_item'           => __( 'Update Item', 'text_domain' ),
@@ -60,19 +60,19 @@ function create_cpt_produits() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 	);
-	register_post_type( 'produits', $args );
+	register_post_type( 'cpt_produit', $args );
 
 }
-add_action( 'init', 'custom_post_type', 0 );
+add_action( 'init', 'create_cpt_produit', 0 );
 
 // Register Custom Post Type
-function create_cpt_tutorials() {
+function create_cpt_tutoriel() {
 
 	$labels = array(
-		'name'                  => _x( 'Tutorials', 'Post Type General Name', 'text_domain' ),
-		'singular_name'         => _x( 'Tutorial', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'             => __( 'Tutorials', 'text_domain' ),
-		'name_admin_bar'        => __( 'Tutorial', 'text_domain' ),
+		'name'                  => _x( 'Tutoriels', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Tutoriel', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Tutoriels', 'text_domain' ),
+		'name_admin_bar'        => __( 'Tutoriel', 'text_domain' ),
 		'archives'              => __( 'Item Archives', 'text_domain' ),
 		'attributes'            => __( 'Item Attributes', 'text_domain' ),
 		'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
@@ -98,7 +98,7 @@ function create_cpt_tutorials() {
 		'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
 	);
 	$args = array(
-		'label'                 => __( 'Tutorial', 'text_domain' ),
+		'label'                 => __( 'Tutoriel', 'text_domain' ),
 		'description'           => __( 'Post Type Description', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail' ),
@@ -116,19 +116,19 @@ function create_cpt_tutorials() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 	);
-	register_post_type( 'tutorial', $args );
+	register_post_type( 'cpt_tutoriel', $args );
 
 }
-add_action( 'init', 'create_cpt_tutorials', 0 );
+add_action( 'init', 'create_cpt_tutoriel', 0 );
 
 // Register Custom Post Type
-function create_cpt_blog() {
+function create_cpt_blogue() {
 
 	$labels = array(
-		'name'                  => _x( 'Blogs', 'Post Type General Name', 'text_domain' ),
-		'singular_name'         => _x( 'Blog', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'             => __( 'Blogs', 'text_domain' ),
-		'name_admin_bar'        => __( 'Blog', 'text_domain' ),
+		'name'                  => _x( 'Blogues', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Blogue', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Blogues', 'text_domain' ),
+		'name_admin_bar'        => __( 'Blogue', 'text_domain' ),
 		'archives'              => __( 'Item Archives', 'text_domain' ),
 		'attributes'            => __( 'Item Attributes', 'text_domain' ),
 		'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
@@ -154,10 +154,10 @@ function create_cpt_blog() {
 		'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
 	);
 	$args = array(
-		'label'                 => __( 'Blog', 'text_domain' ),
+		'label'                 => __( 'Blogue', 'text_domain' ),
 		'description'           => __( 'Post Type Description', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'thumbnail' ),
+		'supports'              => array( 'title', 'editor' ),
 		'taxonomies'            => array( 'category', 'post_tag' ),
 		'hierarchical'          => false,
 		'public'                => true,
@@ -172,10 +172,10 @@ function create_cpt_blog() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 	);
-	register_post_type( 'blog', $args );
+	register_post_type( 'cpt_blogue', $args );
 
 }
-add_action( 'init', 'create_cpt_blog', 0 );
+add_action( 'init', 'create_cpt_blogue', 0 );
 
 if(function_exists('acf_add_options_page')) {
 
