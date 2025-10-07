@@ -63,7 +63,7 @@ function create_cpt_produit() {
 	register_post_type( 'cpt_produit', $args );
 
 }
-add_action( 'init', 'create_cpt_produit', 0 );
+add_action( 'init', 'create_cpt_produits', 0 );
 
 // Register Custom Post Type
 function create_cpt_tutoriel() {
