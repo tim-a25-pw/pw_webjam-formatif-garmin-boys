@@ -15,8 +15,8 @@ function create_cpt_produits() {
 	$labels = array(
 		'name'                  => _x( 'Produits', 'Post Type General Name', 'text_domain' ),
 		'singular_name'         => _x( 'Produit', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'             => __( 'Post Types', 'text_domain' ),
-		'name_admin_bar'        => __( 'Post Type', 'text_domain' ),
+		'menu_name'             => __( 'Produits', 'text_domain' ),
+		'name_admin_bar'        => __( 'Produit', 'text_domain' ),
 		'archives'              => __( 'Item Archives', 'text_domain' ),
 		'attributes'            => __( 'Item Attributes', 'text_domain' ),
 		'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
@@ -71,8 +71,8 @@ function create_cpt_tutorials() {
 	$labels = array(
 		'name'                  => _x( 'Tutorials', 'Post Type General Name', 'text_domain' ),
 		'singular_name'         => _x( 'Tutorial', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'             => __( 'Post Types', 'text_domain' ),
-		'name_admin_bar'        => __( 'Post Type', 'text_domain' ),
+		'menu_name'             => __( 'Tutorials', 'text_domain' ),
+		'name_admin_bar'        => __( 'Tutorial', 'text_domain' ),
 		'archives'              => __( 'Item Archives', 'text_domain' ),
 		'attributes'            => __( 'Item Attributes', 'text_domain' ),
 		'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
@@ -127,8 +127,8 @@ function create_cpt_blog() {
 	$labels = array(
 		'name'                  => _x( 'Blogs', 'Post Type General Name', 'text_domain' ),
 		'singular_name'         => _x( 'Blog', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'             => __( 'Post Types', 'text_domain' ),
-		'name_admin_bar'        => __( 'Post Type', 'text_domain' ),
+		'menu_name'             => __( 'Blogs', 'text_domain' ),
+		'name_admin_bar'        => __( 'Blog', 'text_domain' ),
 		'archives'              => __( 'Item Archives', 'text_domain' ),
 		'attributes'            => __( 'Item Attributes', 'text_domain' ),
 		'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
